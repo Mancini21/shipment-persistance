@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 1:25:43 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tnt.entity.Inrqut01" table="INRQUT01" optimistic-lock="version">
+        <id name="uuid" type="string">
+            <column name="UUID" length="36" />
+            <generator class="assigned" />
+        </id>
+        <property name="pkgty" type="string">
+            <column name="PKGTY" length="3" />
+        </property>
+        <property name="channel" type="string">
+            <column name="CHANNEL" length="5" />
+        </property>
+        <property name="colTd" type="date">
+            <column name="COL_TD" length="7" />
+        </property>
+        <property name="tlwgt" type="big_decimal">
+            <column name="TLWGT" precision="8" scale="3" />
+        </property>
+        <property name="tlvol" type="big_decimal">
+            <column name="TLVOL" precision="7" scale="3" />
+        </property>
+        <property name="uomvl" type="string">
+            <column name="UOMVL" length="4" />
+        </property>
+        <property name="uomwt" type="string">
+            <column name="UOMWT" length="4" />
+        </property>
+        <property name="uomln" type="string">
+            <column name="UOMLN" length="4" />
+        </property>
+        <property name="lancd" type="string">
+            <column name="LANCD" length="2" />
+        </property>
+        <property name="coucd" type="string">
+            <column name="COUCD" length="2" />
+        </property>
+        <property name="currcd" type="string">
+            <column name="CURRCD" length="3" />
+        </property>
+        <property name="gdval" type="big_decimal">
+            <column name="GDVAL" precision="12" scale="3" />
+        </property>
+        <property name="tlitms" type="java.math.BigInteger">
+            <column name="TLITMS" precision="3" scale="0" />
+        </property>
+        <property name="paytrms" type="string">
+            <column name="PAYTRMS" length="1" />
+        </property>
+        <property name="sysCd" type="string">
+            <column name="SYS_CD" length="3" />
+        </property>
+        <property name="accNum" type="java.lang.Long">
+            <column name="ACC_NUM" precision="10" scale="0" />
+        </property>
+        <property name="srct" type="string">
+            <column name="SRCT" length="40" />
+        </property>
+        <property name="srsd" type="string">
+            <column name="SRSD" length="30" />
+        </property>
+        <property name="srcoucd" type="string">
+            <column name="SRCOUCD" length="2" />
+        </property>
+        <property name="srpc" type="string">
+            <column name="SRPC" length="15" />
+        </property>
+        <property name="toct" type="string">
+            <column name="TOCT" length="40" />
+        </property>
+        <property name="tosd" type="string">
+            <column name="TOSD" length="30" />
+        </property>
+        <property name="tocoucd" type="string">
+            <column name="TOCOUCD" length="2" />
+        </property>
+        <property name="topc" type="string">
+            <column name="TOPC" length="15" />
+        </property>
+        <property name="isDeleted" type="string">
+            <column name="IS_DELETED" length="1" />
+        </property>
+        <property name="crtTd" type="date">
+            <column name="CRT_TD" />
+        </property>
+        <property name="updtTd" type="date">
+            <column name="UPDT_TD" />
+        </property>
+        <set name="inrqpt01s" table="INRQPT01"  cascade="all" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UUID" length="36" not-null="true" />
+            </key>
+            <one-to-many class="com.tnt.entity.Inrqpt01" />
+        </set>
+        <set name="inrqit01s" table="INRQIT01" cascade="all" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UUID" length="36" not-null="true" />
+            </key>
+            <one-to-many class="com.tnt.entity.Inrqit01" />
+        </set>
+        <set name="inrqot01s" table="INRQOT01" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UUID" length="36" not-null="true" />
+            </key>
+            <one-to-many class="com.tnt.entity.Inrqot01" />
+        </set>
+    </class>
+</hibernate-mapping>

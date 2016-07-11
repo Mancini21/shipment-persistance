@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 1:25:43 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tnt.entity.Inrqit01" table="INRQIT01" optimistic-lock="version">
+        <composite-id name="id" class="com.tnt.entity.Inrqit01Id">
+            <key-property name="uuid" type="string">
+                <column name="UUID" length="36" />
+                
+            </key-property>
+            <key-property name="itmid" type="short">
+                <column name="ITMID" precision="3" scale="0" />
+                
+            </key-property>
+        </composite-id>
+        <many-to-one name="inrqut01" class="com.tnt.entity.Inrqut01" update="false" insert="false" fetch="select">
+            <column name="UUID" length="36" not-null="true" />
+        </many-to-one>
+        <property name="itqty" type="java.math.BigInteger">
+            <column name="ITQTY" precision="3" scale="0" />
+        </property>
+        <property name="pkgty" type="string">
+            <column name="PKGTY" length="3" />
+        </property>
+        <property name="prdty" type="string">
+            <column name="PRDTY" length="5" />
+        </property>
+        <property name="itlen" type="big_decimal">
+            <column name="ITLEN" precision="7" scale="3" />
+        </property>
+        <property name="itwid" type="big_decimal">
+            <column name="ITWID" precision="7" scale="3" />
+        </property>
+        <property name="ithgt" type="big_decimal">
+            <column name="ITHGT" precision="7" scale="3" />
+        </property>
+        <property name="itwgt" type="big_decimal">
+            <column name="ITWGT" precision="8" scale="3" />
+        </property>
+        <property name="itvol" type="big_decimal">
+            <column name="ITVOL" precision="7" scale="3" />
+        </property>
+        <property name="isDeleted" type="string">
+            <column name="IS_DELETED" length="1" />
+        </property>
+        <property name="crtTd" type="date">
+            <column name="CRT_TD" />
+        </property>
+        <property name="updtTd" type="date">
+            <column name="UPDT_TD" />
+        </property>
+    </class>
+</hibernate-mapping>

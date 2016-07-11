@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 1:25:43 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tnt.entity.Inrqot01" table="INRQOT01" optimistic-lock="version">
+        <composite-id name="id" class="com.tnt.entity.Inrqot01Id">
+            <key-property name="uuid" type="string">
+                <column name="UUID" length="36" />
+            </key-property>
+            <key-property name="prdid" type="string">
+                <column name="PRDID" length="4" />
+            </key-property>
+            <key-property name="optid" type="string">
+                <column name="OPTID" length="5" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="inrqut01" class="com.tnt.entity.Inrqut01" update="false" insert="false" fetch="select">
+            <column name="UUID" length="36" not-null="true" />
+        </many-to-one>
+        <property name="opprc" type="big_decimal">
+            <column name="OPPRC" precision="13" scale="3" />
+        </property>
+        <property name="tlprc" type="big_decimal">
+            <column name="TLPRC" precision="13" scale="3" />
+        </property>
+        <property name="isDeleted" type="string">
+            <column name="IS_DELETED" length="1" />
+        </property>
+        <property name="crtTd" type="serializable">
+            <column name="CRT_TD" />
+        </property>
+        <property name="updtTd" type="serializable">
+            <column name="UPDT_TD" />
+        </property>
+    </class>
+</hibernate-mapping>

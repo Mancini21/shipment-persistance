@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.tnt.integrationframework</groupId>
+		<artifactId>integration-parent</artifactId>
+		<version>1.0.0</version>
+
+	</parent>
+	<groupId>com.tnt.integrationframework</groupId>
+	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>shipment-persistance-api-service</artifactId>
+	<packaging>pom</packaging>
+	<name>shipment persistance api</name>
+
+	<scm>
+		<connection>scm:svn:http://svn-tools.ics.express.tnt/svn/cit/tnt.com/new-track-api/trunk/</connection>
+		<developerConnection>scm:svn:http://svn-tools.ics.express.tnt/svn/cit/tnt.com/new-track-api/trunk/</developerConnection>
+		<url>http://svn-tools.ics.express.tnt/svn/cit/tnt.com/new-track-api/trunk/</url>
+	</scm>
+
+	<modules>
+		<module>shipment-persistance-api</module>
+	</modules>
+	<dependencies>
+		<dependency>
+			<groupId>com.tnt.integrationframework</groupId>
+			<artifactId>common-dependencies-pom</artifactId>
+			<version>${common-dependencies.version}</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.tnt.integrationframework</groupId>
+			<artifactId>hibernate-utils</artifactId>
+			<version>${hibernate-utils.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>antlr</groupId>
+			<artifactId>antlr</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+		<groupId>com.tnt.integrationframework.activityservice</groupId>
+	<artifactId>activityservice-generateandvalidatehashcode-messaging-contract</artifactId>										<!-- name of artifact -->
+	<version>1.0.3</version>
+	</dependency>	
+
+
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tnt.cit.approved.ojdbc14</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>10.2.0.2.0</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<tagBase>http://svn-tools.ics.express.tnt/svn/cit/tnt.com/new-track-api/tags</tagBase>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<properties>
+		<common-dependencies.version>1.0</common-dependencies.version>
+		<hibernate-utils.version>1.0.0</hibernate-utils.version>
+	</properties>
+
+</project>

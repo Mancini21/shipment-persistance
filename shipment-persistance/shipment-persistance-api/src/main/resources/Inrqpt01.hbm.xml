@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2016 1:25:43 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tnt.entity.Inrqpt01" table="INRQPT01" optimistic-lock="version">
+        <composite-id name="id" class="com.tnt.entity.Inrqpt01Id">
+            <key-property name="uuid" type="string">
+                <column name="UUID" length="36" />
+            </key-property>
+            <key-property name="prdid" type="string">
+                <column name="PRDID" length="4" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="inrqut01" class="com.tnt.entity.Inrqut01" update="false" insert="false" fetch="select">
+            <column name="UUID" length="36" not-null="true" />
+        </many-to-one>
+        <property name="lob" type="string">
+            <column name="LOB" length="1" />
+        </property>
+        <property name="pdgrp" type="string">
+            <column name="PDGRP" length="1" />
+        </property>
+        <property name="pdsgp" type="string">
+            <column name="PDSGP" length="1" />
+        </property>
+        <property name="prdty" type="string">
+            <column name="PRDTY" length="5" />
+        </property>
+        <property name="enhancedLiabilityValue" type="big_decimal">
+            <column name="ENHANCED_LIABILITY_VALUE" precision="13" scale="3" />
+        </property>
+        <property name="cusdr" type="string">
+            <column name="CUSDR" length="1" />
+        </property>
+        <property name="frmlocid" type="java.lang.Long">
+            <column name="FRMLOCID" precision="5" scale="0" />
+        </property>
+        <property name="tolocid" type="java.lang.Long">
+            <column name="TOLOCID" precision="5" scale="0" />
+        </property>
+        <property name="currcd" type="string">
+            <column name="CURRCD" length="3" />
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="PRICE" precision="13" scale="3" />
+        </property>
+        <property name="vat" type="big_decimal">
+            <column name="VAT" precision="13" scale="3" />
+        </property>
+        <property name="isDeleted" type="string">
+            <column name="IS_DELETED" length="1" />
+        </property>
+        <property name="crtTd" type="date">
+            <column name="CRT_TD" />
+        </property>
+        <property name="updtTd" type="date">
+            <column name="UPDT_TD" />
+        </property>
+    </class>
+</hibernate-mapping>

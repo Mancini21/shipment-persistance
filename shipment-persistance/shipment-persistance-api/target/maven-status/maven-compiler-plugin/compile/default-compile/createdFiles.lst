@@ -1,0 +1,13 @@
+com\tnt\entity\Inrqot01.class
+com\tnt\entity\Inrqot01Id.class
+com\tnt\integrationframework\activityservice\shipmentpersistance\Runner.class
+com\tnt\entity\Inrqit01.class
+com\tnt\entity\Inrqut01.class
+com\tnt\integrationframework\activityservice\shipmentpersistance\GenerateQuoteHashCodeRequest.class
+com\tnt\shipmentpersistanceapi\helper\ShipmentPersistanceHelper.class
+com\tnt\entity\Inrqpt01Id.class
+com\tnt\integrationframework\activityservice\shipmentpersistance\GenerateQuoteHashCodeReply.class
+com\tnt\integrationframework\activityservice\shipmentpersistance\OrderPersistance.class
+com\tnt\integrationframework\activityservice\shipmentpersistance\SessionFactoryProducer.class
+com\tnt\entity\Inrqit01Id.class
+com\tnt\entity\Inrqpt01.class
